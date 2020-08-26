@@ -5,6 +5,7 @@ import 'package:meet_colgaia/screens/auth/register_screen.dart';
 import 'package:meet_colgaia/screens/chat/chat_hub_screen.dart';
 import 'package:meet_colgaia/screens/chat/chat_screen.dart';
 import 'package:meet_colgaia/screens/home_screen.dart';
+import 'package:meet_colgaia/screens/match_screen.dart';
 import 'package:meet_colgaia/screens/presentation_screen.dart';
 import 'package:meet_colgaia/screens/profile/profile_screen.dart';
 import 'package:meet_colgaia/screens/splash_screen.dart';
@@ -42,6 +43,10 @@ class FluroRouter {
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           PresentationScreen());
 
+  static Handler _matchHandler = Handler(
+      handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+          MatchScreen());
+
   static void setupRouter() {
     router.define(
       'home',
@@ -74,6 +79,10 @@ class FluroRouter {
     router.define(
       'presentation',
       handler: _presentationHandler,
+    );
+    router.define(
+      'match',
+      handler: _matchHandler,
     );
   }
 }

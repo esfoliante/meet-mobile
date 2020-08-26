@@ -44,7 +44,7 @@ class ChatAppBar extends StatelessWidget {
           FeatherIcons.arrowLeft,
           color: Colors.black87,
         ),
-        onPressed: () => Navigator.pop(context),
+        onPressed: () => Navigator.pushNamed(context, 'chatHub'),
       ),
       elevation: 1,
     );
