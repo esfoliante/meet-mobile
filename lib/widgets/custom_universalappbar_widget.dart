@@ -22,7 +22,7 @@ class UniversalAppBar extends StatelessWidget {
       centerTitle: true,
       leading: IconButton(
         icon: Icon(FeatherIcons.arrowLeft, color: Colors.black87),
-        onPressed: () => Navigator.pop(context),
+        onPressed: () => Navigator.pushNamed(context, 'home'),
       ),
       elevation: 1,
     );
