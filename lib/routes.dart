@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as fluro;
 import 'package:meet_colgaia/screens/auth/login_screen.dart';
 import 'package:meet_colgaia/screens/auth/register_screen.dart';
 import 'package:meet_colgaia/screens/chat/chat_hub_screen.dart';
@@ -11,35 +11,35 @@ import 'package:meet_colgaia/screens/profile/profile_screen.dart';
 import 'package:meet_colgaia/screens/splash_screen.dart';
 
 class FluroRouter {
-  static Router router = Router();
+  static fluro.Router router = fluro.Router();
 
-  static Handler _homeHandler = Handler(
+  static fluro.Handler _homeHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           HomeScreen());
 
-  static Handler _chatHubHandler = Handler(
+  static fluro.Handler _chatHubHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           ChatHubScreen());
-  static Handler _chatHandler = Handler(
+  static fluro.Handler _chatHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           ChatScreen());
 
-  static Handler _profileHandler = Handler(
+  static fluro.Handler _profileHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           ProfileScreen());
 
-  static Handler _splashHandler = Handler(
+  static fluro.Handler _splashHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           SplashScreen());
 
-  static Handler _loginHandler = Handler(
+  static fluro.Handler _loginHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           LoginScreen());
-  static Handler _registerHandler = Handler(
+  static fluro.Handler _registerHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           RegisterScreen());
 
-  static Handler _presentationHandler = Handler(
+  static fluro.Handler _presentationHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           PresentationScreen());
 
