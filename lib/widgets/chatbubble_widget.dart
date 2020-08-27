@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class FriendChatBubble extends StatelessWidget {
-  const FriendChatBubble({Key key}) : super(key: key);
+class ChatBubble extends StatelessWidget {
+  final Alignment alignment;
+  final Color color;
+  final String message;
+  const ChatBubble(
+      {Key key,
+      @required this.alignment,
+      @required this.color,
+      @required this.message})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,20 +17,21 @@ class FriendChatBubble extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     return Align(
-      alignment: Alignment.topLeft,
+      alignment: this.alignment,
       child: Padding(
         padding: const EdgeInsets.only(
           top: 5.0,
+          right: 15.0,
           left: 15.0,
           bottom: 5.0,
         ),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.grey[500],
+            color: this.color,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
-              bottomRight: Radius.circular(20.0),
+              bottomLeft: Radius.circular(20.0),
             ),
           ),
           constraints: BoxConstraints(
@@ -33,7 +42,7 @@ class FriendChatBubble extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              "Hello world",
+              this.message,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14.0,
