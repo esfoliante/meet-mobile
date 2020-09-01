@@ -43,7 +43,7 @@ class FluroRouter {
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           PresentationScreen());
 
-  static Handler _matchHandler = Handler(
+  static fluro.Handler _matchHandler = fluro.Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           MatchScreen());
 

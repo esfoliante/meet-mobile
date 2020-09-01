@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: height * 0.1),
               PictureCard(
                 name: "Bárbara Monteiro",
-                course: "Análises Quimico Biológicas",
+                course: "Saúde",
+                school: "Colégio de Gaia",
               ),
               SizedBox(
                 height: height * 0.07,
