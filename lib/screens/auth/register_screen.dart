@@ -121,7 +121,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   bottom: 5.0,
                 ),
                 child: Text(
-                  "Made with ❤️ by Miguel Ferreira",
+                  "Made with ❤️ by Menso Software",
                 ),
               ),
             ],
