@@ -99,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                   bottom: 20.0,
                 ),
                 child: Text(
-                  "Made with ❤️ by Miguel Ferreira",
+                  "Made with ❤️ by Menso Software",
                 ),
               ),
             ],
